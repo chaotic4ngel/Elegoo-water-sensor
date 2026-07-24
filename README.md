@@ -2,8 +2,8 @@
 const int greenLED = 2;
 const int yellowLED = 3;
 const int redLED = 4;
-const int buzzer = 6;        // Buzzer moved to D6
-const int waterSensor = A0;  // Water sensor connected to A0 (استبدل O بالصفر)
+const int buzzer = 6;        // Buzzer on D6
+const int waterSensor = A0;  // Water sensor connected to A0
 
 void setup() {
   pinMode(greenLED, OUTPUT);
@@ -19,7 +19,7 @@ void loop() {
   
   // Print the sensor reading
   Serial.print("Water Level: ");
-  Serial.println(waterLevel); // تصحيح Serial.printIn إلى Serial.println
+  Serial.println(waterLevel);
 
   // Decision making based on water level reading
   if (waterLevel < 200) {
@@ -53,4 +53,3 @@ void loop() {
   
   delay(500); 
 }
-
